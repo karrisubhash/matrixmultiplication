@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Matrix Multiplication Flowchart</title>
+    <!-- Mermaid.js CDN -->
+    <script src="https://cdn.jsdelivr.net/npm/mermaid/dist/mermaid.min.js"></script>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            margin: 20px;
+        }
+        .mermaid {
+            background-color: #f9f9f9;
+            padding: 20px;
+            border-radius: 10px;
+            display: inline-block;
+            max-width: 90%;
+            overflow-x: auto;
+        }
+    </style>
+</head>
+<body>
+
+    <h2>Matrix Multiplication Flowchart</h2>
+
+    <!-- Mermaid Flowchart Container -->
+    <div class="mermaid">
+        graph TD;
+            A(Start) --> B[Initialize matrices mat1, mat2, result];
+            B --> C[Display Matrix-1];
+            C --> D[Display Matrix-2];
+            D --> E{Loop i=0 to 1};
+            E -->|Yes| F{Loop j=0 to 1};
+            F -->|Yes| G{Loop k=0 to 2};
+            G -->|Yes| H[result[i][j] += mat1[i][k] * mat2[k][j]];
+            H --> G;
+            G -->|No| F;
+            F -->|No| E;
+            E -->|No| I[Display Resultant Matrix];
+            I --> J(End);
+    </div>
+
+    <script>
+        mermaid.initialize({ startOnLoad: true });
+    </script>
+
+</body>
+</html>
