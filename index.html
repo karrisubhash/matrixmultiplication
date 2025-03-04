@@ -4,8 +4,10 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Matrix Multiplication Flowchart</title>
+    
     <!-- Mermaid.js CDN -->
     <script src="https://cdn.jsdelivr.net/npm/mermaid/dist/mermaid.min.js"></script>
+
     <style>
         body {
             font-family: Arial, sans-serif;
@@ -17,7 +19,7 @@
             padding: 20px;
             border-radius: 10px;
             display: inline-block;
-            max-width: 90%;
+            max-width: 100%;
             overflow-x: auto;
         }
     </style>
@@ -44,7 +46,9 @@
     </div>
 
     <script>
-        mermaid.initialize({ startOnLoad: true });
+        document.addEventListener("DOMContentLoaded", function() {
+            mermaid.initialize({ startOnLoad: true });
+        });
     </script>
 
 </body>
